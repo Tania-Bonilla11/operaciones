@@ -6,18 +6,23 @@ $(document).ready(function () {
         let lista = cantidad.split(",").map(Number);
         let pares=[];
         let impares=[];
-        var idx=[];
-       
-        
+
         lista.forEach(element => {
-            if(element%2==0){
+            if(element%2==0){  
+               
                 pares.push(element);
-                
-            }else{
-              impares.push(element);          
-            }   
+              
+            }else{  
+    
+              impares.push(element); 
+                  
+            }  
+             
         });      
+        let lenght=pares.length;
+        let lenght1=impares.length;
         $('#lblRespuesta').html(`los numeros pares son ${pares} y los numeros impares son ${impares}`);
+        $('#lblRespuestaa').html(`cantidad pares son ${lenght} y la cantidad  impares son ${lenght1}`);
     
 
         
